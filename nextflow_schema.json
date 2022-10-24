@@ -11,7 +11,6 @@
             "fa_icon": "fas fa-terminal",
             "description": "Define where the pipeline should find input data and save output data.",
             "required": [
-                "in",
                 "outdir"
             ],
             "properties": {
@@ -21,7 +20,7 @@
                 },
                 "input": {
                     "type": "string",
-                    "default": null
+                    "default": "None"
                 },
                 "outdir": {
                     "type": "string",
@@ -35,6 +34,48 @@
                     "fa_icon": "fas fa-envelope",
                     "help_text": "Set this parameter to your e-mail address to get a summary e-mail with details of the run sent to you when the workflow exits. If set in your user config file (`~/.nextflow/config`) then you don't need to specify this on the command line for every run.",
                     "pattern": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+                },
+                "sample_name": {
+                    "type": "string"
+                },
+                "start_at": {
+                    "type": "string"
+                },
+                "stop_at": {
+                    "type": "string"
+                },
+                "qc_files": {
+                    "type": "string"
+                },
+                "tma": {
+                    "type": "boolean"
+                },
+                "viz": {
+                    "type": "boolean"
+                },
+                "multi_formats": {
+                    "type": "string"
+                },
+                "single_formats": {
+                    "type": "string"
+                },
+                "segmentation": {
+                    "type": "string"
+                },
+                "segmentation_channel": {
+                    "type": "string"
+                },
+                "segmentation_recyze": {
+                    "type": "boolean"
+                },
+                "downstream": {
+                    "type": "string"
+                },
+                "ilastik_model": {
+                    "type": "string"
+                },
+                "mesmer_model": {
+                    "type": "string"
                 }
             }
         },

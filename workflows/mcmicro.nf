@@ -6,12 +6,23 @@
 
 def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
 
+// Parse MCMICRO parameters (mcp)
+/*
+mcp = WorkflowMcmicro.parseParams(
+    params, 
+    "config/schema.yml",
+    "config/defaults.yml"
+)
+*/
+
 // Validate input parameters
 WorkflowMcmicro.initialise(params, log)
 
 // TODO nf-core: Add all file path parameters for the pipeline to the list below
 // Check input path parameters to see if they exist
-def checkPathParamList = [ params.in ]
+def checkPathParamList = [ params.in, params.sample_name, params.start_at, params.stop_at, params.qc_files,
+                           params.tma, params.viz, params.segmentation, params.segmentation_channel,
+                           params.segmentation_recyze, params.downstream, params.ilastik_model, params.mesmer_model ]
 for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
 
 // Check mandatory parameters
