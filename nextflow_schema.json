@@ -39,13 +39,16 @@
                     "type": "string"
                 },
                 "start_at": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "registration"
                 },
                 "stop_at": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "quantification"
                 },
                 "qc_files": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "copy"
                 },
                 "tma": {
                     "type": "boolean"
@@ -54,13 +57,16 @@
                     "type": "boolean"
                 },
                 "multi_formats": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "{.xdce,.nd,.scan,.htd}"
                 },
                 "single_formats": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "{.ome.tiff,.ome.tif,.rcpnl,.btf,.nd2,.tif,.czi}"
                 },
                 "segmentation": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "unmicst"
                 },
                 "segmentation_channel": {
                     "type": "string"
@@ -69,7 +75,8 @@
                     "type": "boolean"
                 },
                 "downstream": {
-                    "type": "string"
+                    "type": "string",
+                    "default": "scimap"
                 },
                 "ilastik_model": {
                     "type": "string"
